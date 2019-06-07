@@ -1,20 +1,15 @@
-// JavaScript source code
+function setText() {
+  var main = document.getElementById('main');
 
-function getFile() {
-
-    console.log('INIT CALLED!');
-
-    var main = document.getElementById('main');
-
-    var myRequest = new Request(
-        "https://cors.io/?https://raw.githubusercontent.com/JeremySorensen/text-request/master/text.txt",
-        { mode: 'no-cors' });
-    console.log(myRequest);
-    fetch(myRequest).then(function (response) {
-        return response.text().then(function (text) {
-            console.log(text);
-            main.innerHTML = text;
-        });
+  var myRequest = new Request(
+    "https://jeremysorensen.github.io/text-request/text.txt",
+    { mode: "no-cors" }
+  );
+  console.log(myRequest);
+  fetch(myRequest).then(function (response) {
+    return response.text().then(function (text) {
+      console.log(text);
+      main.innerHTML = text;
     });
+  });
 }
-
