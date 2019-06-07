@@ -2,7 +2,7 @@ function setText() {
   var main = document.getElementById('main');
 
   var myRequest = new Request(
-    "https://jeremysorensen.github.io/text-request/text.txt"
+    "https://jeremysorensen.github.io/text-request/text.txt",
     { mode: "no-cors" }
   );
   console.log(myRequest);
